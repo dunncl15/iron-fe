@@ -19,26 +19,3 @@ function addUsername(list) {
     return dev;
   })
 }
-
-//#2
-const obj = { kale: 12, apple: 5, orange: 1 };
-const answer = [{ kale: 12 }, { apple: 5 }, { orange: 1 }];
-
-//Solution
-const makeArrayObjs = (obj) => {
-  return Object.keys(obj).reduce((acc, key) => {
-    let newObj = Object.assign({}, {[key]: obj[key]});
-    acc.push(newObj);
-    return acc;
-  }, []);
-}
-
-//#3
-const obj = { kale: 12, apple: 5, orange: 8, garlic: 130, banana: 8, avocado: 44 };
-const answer = { kale: 12, apple: 9, orange: 8, garlic: 130, banana: 8, avocado: 44 };
-
-//Solution
-const addItems = (obj, fruit, num) => {
-  obj.hasOwnProperty(fruit) ? obj[fruit] += num : obj[fruit] = num;
-  return obj;
-}
